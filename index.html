@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Web App</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/styles.css">
+  <script src="./src/script.js" defer></script>
+</head>
+<body>
+ 
+
+  <div class="card">
+    <h2 class="heading">Weather Cities Project</h2>
+    <div class="search">
+      <input type="text" class="search-bar" placeholder="Search for a city or airport">
+      <button>
+        Add City
+      </button>
+    </div>
+    <div class="weather loading">
+      <div style="display:flex ;">
+        <div>
+          <h1 class="temp">25.02°C</h1>
+          <div class="humidity">Humidity: 91%</div>
+          <h2 class="city">Weather in Manipal</h2>
+        </div>
+  
+        <div>
+          <div class="flex">
+            <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
+            <div class="description">Cloudy</div>
+          </div>
+          <div class="wind">Wind speed: 63.05 km/h</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+  <script>
+    VanillaTilt.init(document.querySelectorAll(".card"), {
+		max: 4,
+		speed: 800,
+    scale: 1.03,
+    glare: true,
+    "max-glare": 0.5,
+	});
+  </script>
+</body>
+</html>
